@@ -1,0 +1,9 @@
+extends ./layout.jade
+block contenido
+    script(src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js")
+    script(src="js/Firebase.js")
+    script(src="js/MapsBus.js")
+    script(async, defender, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB28-pf1-kV1sVxs20krDbEeGWb00nUwLE&callback=MapsBus.init")    
+    div(class="u-center-block__content u-center-block__content--horizontal")
+        div(class="u-center-block__content u-center-block__content--horizontal")
+            div(id="map", class="map_index")

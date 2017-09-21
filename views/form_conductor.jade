@@ -1,0 +1,23 @@
+extends ./layout.jade
+block contenido
+    div(class="u-center-block")
+        div(class="u-center-block__content u-center-block__content--horizontal")
+            h1(class="c-heading") conductor
+            form(action="/conductor/nuevo", method="POST")                
+                div(class="o-form-element")
+                    label(class="c-label" for="email") Correo
+                    input(class="c-field" type="email", name="email", placeholder="Email", required)
+                    div(class="o-form-element")
+                    label(class="c-label" for="password") Contraseña
+                    input(class="c-field" type="password", name="password", placeholder="password", size="6", required) 
+                div(class="o-form-element")
+                    label(class="c-label" for="nombre") Nombre
+                    input(class="c-field" type="text", name="nombre", placeholder="Nombre", required) 
+                div(class="o-form-element")
+                    label(class="c-label" for="phone") Telefono
+                    input(class="c-field" type="tel", name="phone", placeholder="Telefono", required)                                    
+                div(class="o-form-element")
+                    label(class="c-label" for="roll") Roll
+                    input(class="c-field" type="text", name="roll", value="conductor", placeholder="Roll", readonly, required)                    
+                div(class="o-form-element")
+                    button(class="c-button c-button--brand c-button--block" type="submit") Guardar

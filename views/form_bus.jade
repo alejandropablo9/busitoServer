@@ -1,0 +1,28 @@
+extends ./layout.jade
+block contenido
+    script(src="../js/Maps.js")
+    script(async, defender, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB28-pf1-kV1sVxs20krDbEeGWb00nUwLE&callback=Maps.initMap")    
+    div(class="o-grid")
+        div(class="o-grid__cell o-grid__cell--width-50")
+            div(class="u-letter-box--none o-container o-container--large")
+                div(id="map" class="o-form-element map_container")
+        div(class="o-grid__cell")    
+            h1(class="c-heading") Agregar Bus            
+            form(action="/buses/nuevo", method="POST")
+                div(class="o-form-element")           
+                    input(id='origenLat', class="c-field", name="origenLat", placeholder="bus", type="hidden", readonly)
+                    input(id='origenLng', class="c-field", name="origenLng", placeholder="bus", type="hidden", readonly)
+                    input(id="destinoLat", class="c-field", name="destinoLat", placeholder="bus", type="hidden", readonly)
+                    input(id="destinoLng", class="c-field", name="destinoLng", placeholder="bus", type="hidden", readonly)                                                                                     
+                div(class="o-form-element")                    
+                    label(class="c-label" for="bus") Numero de Autobus
+                    input(class="c-field" type="number", name="bus", placeholder="bus", required)
+                div(class="o-form-element")
+                    label(class="c-label" for="beacon") Beacon
+                    select(class="c-field" name="beacon")
+                        each beacon in beacons
+                            option(value=beacon.identifier) #{beacon.color}                                 
+                div(class="o-form-element")
+                    button(class="c-button c-button--brand c-button--block" type="submit") Guardar
+    
+    

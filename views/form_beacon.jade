@@ -1,0 +1,23 @@
+extends ./layout.jade
+block contenido
+    div(class="u-center-block")
+        div(class="u-center-block__content u-center-block__content--horizontal")
+            h1(class="c-heading") beacon                    
+            form(action="/beacon/nuevo", method="POST")     
+                div(class="o-form-element")
+                    label(class="c-label" for="dentifier") identifier
+                    input(class="c-field" type="text", name="identifier", placeholder="identifier", required) 
+                div(class="o-form-element")
+                    label(class="c-label" for="idbeacon") Proximity UUID Beacon
+                    input(class="c-field" type="text", name="idbeacon", placeholder="UUID Beacon", required)
+                div(class="o-form-element")
+                    label(class="c-label" for="color") Color
+                    input(class="c-field" type="text", name="color", placeholder="Color", required)
+                div(class="o-form-element")
+                    label(class="c-label" for="major") Major Beacon
+                    input(class="c-field" type="number", name="major", placeholder="Major", required) 
+                div(class="o-form-element")
+                    label(class="c-label" for="minor") Minor Beacon
+                    input(class="c-field" type="number", name="minor", placeholder="Minor", required)                    
+                div(class="o-form-element")
+                    button(class="c-button c-button--brand c-button--block" type="submit") Guardar    

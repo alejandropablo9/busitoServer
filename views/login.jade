@@ -1,0 +1,14 @@
+extends ./layout.jade
+block contenido
+    div(class="u-center-block")
+        div(class="u-center-block__content u-center-block__content--horizontal")
+            h1(class="c-heading") Inicia Sesión
+            form(action="/users", method="POST")
+                div(class="o-form-element")                    
+                    label(class="c-label" for="email") Email
+                    input(class="c-field" type="email", name="email", placeholder="Email", required)
+                div(class="o-form-element")
+                    label(class="c-label" for="password") Password
+                    input(class="c-field" type="password", name="password", placeholder="Password", required)
+                div(class="o-form-element")
+                    button(class="c-button c-button--brand c-button--block" type="submit") Login

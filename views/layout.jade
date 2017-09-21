@@ -1,0 +1,17 @@
+doctype html
+html(lang="es")
+    head
+        title BusITO
+        meta(charset="utf-8")
+        link(href="../css/blaze.min.css", rel="stylesheet")
+        link(href="../css/main.css", rel="stylesheet")
+        link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro")        
+    body
+        nav(class="c-nav c-nav--inline")
+            a(href="/" class="c-nav__item") Inicio 
+            a(href="/buses/nuevo" class="c-nav__item") registrar bus 
+            a(href="/conductor/nuevo" class="c-nav__item") registrar conductor 
+            a(href="/beacon/nuevo" class="c-nav__item") registrar beacon
+            //a(href="/login" class="c-nav__item c-nav__item--right") iniciar sesion        
+        block contenido        
+                
